@@ -2,9 +2,7 @@
 
 A small website to search for information about GitHub profiles. Type a username and see the avatar, name, bio, followers, and public repo count.
 
-**Live demo:** https://Arikachi.github.io/user-search/
-
-![Screenshot](screenshots/screenshot.png)
+**Live demo:** https://arikachi.github.io/user_search/
 
 ## Features
 
