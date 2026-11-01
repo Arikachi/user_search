@@ -48,3 +48,15 @@ export function clearStatus(){
     status.classList.remove("error");
     status.textContent = "";
 }
+
+export function renderHistory(list){
+    const history = document.getElementById("history");
+    history.replaceChildren();
+
+    list.forEach(element => {
+        const li = document.createElement("li");
+        li.textContent = element;
+        li.dataset.username = element;
+        history.append(li);
+    });
+}
