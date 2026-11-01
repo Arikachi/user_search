@@ -8,7 +8,7 @@ export async function fetchUser(username) {
         }else if(res.status === 403){
             throw new Error("Rate limit reached, try again later");
         }else{
-            throw new Error("An error have occured");
+            throw new Error("An error has occurred");
         }
     }
     const userData = await res.json();
