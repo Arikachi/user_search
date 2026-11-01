@@ -1,7 +1,12 @@
 export async function fetchUser(username) {
     const encodedUsername = encodeURIComponent(username);
     const url = `https://api.github.com/users/${encodedUsername}`;
-    const res = await fetch(url);
+    let res;
+    try{
+        res = await fetch(url);
+    }catch(err){
+        throw new Error("No network connection.");
+    }
     if (!res.ok){
         if(res.status === 404){
             throw new Error("User not found");    
